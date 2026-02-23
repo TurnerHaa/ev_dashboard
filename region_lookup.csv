@@ -1,0 +1,434 @@
+region_ons,region_name,parent,parent_ons,level,classification
+K02000001,United Kingdom,,,1,Nation
+K03000001,Great Britain,United Kingdom,K02000001,2,Island
+E92000001,England,Great Britain,K03000001,3,Country
+E12000001,North East,England,E92000001,4,Region
+E06000047,County Durham,North East,E12000001,5,Upper level
+E06000005,Darlington,North East,E12000001,5,Upper level
+E06000001,Hartlepool,North East,E12000001,5,Upper level
+E06000002,Middlesbrough,North East,E12000001,5,Upper level
+E06000057,Northumberland,North East,E12000001,5,Upper level
+E06000003,Redcar and Cleveland,North East,E12000001,5,Upper level
+E06000004,Stockton-on-Tees,North East,E12000001,5,Upper level
+E11000007,Tyne and Wear (Metropolitan County),North East,E12000001,5,Upper level
+E08000037,Gateshead,Tyne and Wear (Metropolitan County),E11000007,6,Authority
+E08000021,Newcastle upon Tyne,Tyne and Wear (Metropolitan County),E11000007,6,Authority
+E08000022,North Tyneside,Tyne and Wear (Metropolitan County),E11000007,6,Authority
+E08000023,South Tyneside,Tyne and Wear (Metropolitan County),E11000007,6,Authority
+E08000024,Sunderland,Tyne and Wear (Metropolitan County),E11000007,6,Authority
+E12000002,North West,England,E92000001,4,Region
+E06000008,Blackburn with Darwen,North West,E12000002,5,Upper level
+E06000009,Blackpool,North West,E12000002,5,Upper level
+E06000049,Cheshire East,North West,E12000002,5,Upper level
+E06000050,Cheshire West and Chester,North West,E12000002,5,Upper level
+E06000063,Cumberland (from April 2023),North West,E12000002,5,Upper level
+E06000006,Halton,North West,E12000002,5,Upper level
+E06000007,Warrington,North West,E12000002,5,Upper level
+E06000064,Westmorland and Furness (from April 2023),North West,E12000002,5,Upper level
+E10000006,Cumbria (abolished April 2023),North West,E12000002,5,Upper level
+E07000026,Allerdale (abolished April 2023),Cumbria (abolished April 2023),E10000006,6,Authority
+E07000027,Barrow-in-Furness (abolished April 2023),Cumbria (abolished April 2023),E10000006,6,Authority
+E07000028,Carlisle (abolished April 2023),Cumbria (abolished April 2023),E10000006,6,Authority
+E07000029,Copeland (abolished April 2023),Cumbria (abolished April 2023),E10000006,6,Authority
+E07000030,Eden (abolished April 2023),Cumbria (abolished April 2023),E10000006,6,Authority
+E07000031,South Lakeland (abolished April 2023),Cumbria (abolished April 2023),E10000006,6,Authority
+E11000001,Greater Manchester (Metropolitan County),North West,E12000002,5,Upper level
+E08000001,Bolton,Greater Manchester (Metropolitan County),E11000001,6,Authority
+E08000002,Bury,Greater Manchester (Metropolitan County),E11000001,6,Authority
+E08000003,Manchester,Greater Manchester (Metropolitan County),E11000001,6,Authority
+E08000004,Oldham,Greater Manchester (Metropolitan County),E11000001,6,Authority
+E08000005,Rochdale,Greater Manchester (Metropolitan County),E11000001,6,Authority
+E08000006,Salford,Greater Manchester (Metropolitan County),E11000001,6,Authority
+E08000007,Stockport,Greater Manchester (Metropolitan County),E11000001,6,Authority
+E08000008,Tameside,Greater Manchester (Metropolitan County),E11000001,6,Authority
+E08000009,Trafford,Greater Manchester (Metropolitan County),E11000001,6,Authority
+E08000010,Wigan,Greater Manchester (Metropolitan County),E11000001,6,Authority
+E10000017,Lancashire,North West,E12000002,5,Upper level
+E07000117,Burnley,Lancashire,E10000017,6,Authority
+E07000118,Chorley,Lancashire,E10000017,6,Authority
+E07000119,Fylde,Lancashire,E10000017,6,Authority
+E07000120,Hyndburn,Lancashire,E10000017,6,Authority
+E07000121,Lancaster,Lancashire,E10000017,6,Authority
+E07000122,Pendle,Lancashire,E10000017,6,Authority
+E07000123,Preston,Lancashire,E10000017,6,Authority
+E07000124,Ribble Valley,Lancashire,E10000017,6,Authority
+E07000125,Rossendale,Lancashire,E10000017,6,Authority
+E07000126,South Ribble,Lancashire,E10000017,6,Authority
+E07000127,West Lancashire,Lancashire,E10000017,6,Authority
+E07000128,Wyre,Lancashire,E10000017,6,Authority
+E11000002,Merseyside (Metropolitan County),North West,E12000002,5,Upper level
+E08000011,Knowsley,Merseyside (Metropolitan County),E11000002,6,Authority
+E08000012,Liverpool,Merseyside (Metropolitan County),E11000002,6,Authority
+E08000014,Sefton,Merseyside (Metropolitan County),E11000002,6,Authority
+E08000013,St. Helens,Merseyside (Metropolitan County),E11000002,6,Authority
+E08000015,Wirral,Merseyside (Metropolitan County),E11000002,6,Authority
+E12000003,Yorkshire and the Humber,England,E92000001,4,Region
+E06000011,East Riding of Yorkshire,Yorkshire and the Humber,E12000003,5,Upper level
+E06000010,"Kingston upon Hull, City of",Yorkshire and the Humber,E12000003,5,Upper level
+E06000012,North East Lincolnshire,Yorkshire and the Humber,E12000003,5,Upper level
+E06000013,North Lincolnshire,Yorkshire and the Humber,E12000003,5,Upper level
+E06000065,North Yorkshire (from April 2023),Yorkshire and the Humber,E12000003,5,Upper level
+E06000014,York [Note 13],Yorkshire and the Humber,E12000003,6,Authority
+E10000023,North Yorkshire (abolished April 2023),Yorkshire and the Humber,E12000003,5,Upper level
+E07000163,Craven (abolished April 2023),North Yorkshire (abolished April 2023),E10000023,6,Authority
+E07000164,Hambleton (abolished April 2023),North Yorkshire (abolished April 2023),E10000023,6,Authority
+E07000165,Harrogate (abolished April 2023),North Yorkshire (abolished April 2023),E10000023,6,Authority
+E07000166,Richmondshire (abolished April 2023),North Yorkshire (abolished April 2023),E10000023,6,Authority
+E07000167,Ryedale (abolished April 2023),North Yorkshire (abolished April 2023),E10000023,6,Authority
+E07000168,Scarborough (abolished April 2023),North Yorkshire (abolished April 2023),E10000023,6,Authority
+E07000169,Selby (abolished April 2023),North Yorkshire (abolished April 2023),E10000023,6,Authority
+E11000003,South Yorkshire (Metropolitan County),Yorkshire and the Humber,E12000003,5,Upper level
+E08000016,Barnsley,South Yorkshire (Metropolitan County),E11000003,6,Authority
+E08000017,Doncaster,South Yorkshire (Metropolitan County),E11000003,6,Authority
+E08000018,Rotherham,South Yorkshire (Metropolitan County),E11000003,6,Authority
+E08000019,Sheffield,South Yorkshire (Metropolitan County),E11000003,6,Authority
+E11000006,West Yorkshire (Metropolitan County),Yorkshire and the Humber,E12000003,5,Upper level
+E08000032,Bradford,West Yorkshire (Metropolitan County),E11000006,6,Authority
+E08000033,Calderdale,West Yorkshire (Metropolitan County),E11000006,6,Authority
+E08000034,Kirklees,West Yorkshire (Metropolitan County),E11000006,6,Authority
+E08000035,Leeds,West Yorkshire (Metropolitan County),E11000006,6,Authority
+E08000036,Wakefield,West Yorkshire (Metropolitan County),E11000006,6,Authority
+E12000004,East Midlands,England,E92000001,4,Region
+E06000015,Derby,East Midlands,E12000004,5,Upper level
+E06000016,Leicester,East Midlands,E12000004,5,Upper level
+E06000061,North Northamptonshire (from April 2021),East Midlands,E12000004,5,Upper level
+E06000018,Nottingham,East Midlands,E12000004,5,Upper level
+E06000017,Rutland,East Midlands,E12000004,5,Upper level
+E06000062,West Northamptonshire (from April 2021),East Midlands,E12000004,5,Upper level
+E10000007,Derbyshire,East Midlands,E12000004,5,Upper level
+E07000032,Amber Valley,Derbyshire,E10000007,6,Authority
+E07000033,Bolsover,Derbyshire,E10000007,6,Authority
+E07000034,Chesterfield,Derbyshire,E10000007,6,Authority
+E07000035,Derbyshire Dales,Derbyshire,E10000007,6,Authority
+E07000036,Erewash,Derbyshire,E10000007,6,Authority
+E07000037,High Peak,Derbyshire,E10000007,6,Authority
+E07000038,North East Derbyshire,Derbyshire,E10000007,6,Authority
+E07000039,South Derbyshire,Derbyshire,E10000007,6,Authority
+E10000018,Leicestershire,East Midlands,E12000004,5,Upper level
+E07000129,Blaby,Leicestershire,E10000018,6,Authority
+E07000130,Charnwood,Leicestershire,E10000018,6,Authority
+E07000131,Harborough,Leicestershire,E10000018,6,Authority
+E07000132,Hinckley and Bosworth,Leicestershire,E10000018,6,Authority
+E07000133,Melton,Leicestershire,E10000018,6,Authority
+E07000134,North West Leicestershire,Leicestershire,E10000018,6,Authority
+E07000135,Oadby and Wigston,Leicestershire,E10000018,6,Authority
+E10000019,Lincolnshire,East Midlands,E12000004,5,Upper level
+E07000136,Boston,Lincolnshire,E10000019,6,Authority
+E07000137,East Lindsey,Lincolnshire,E10000019,6,Authority
+E07000138,Lincoln,Lincolnshire,E10000019,6,Authority
+E07000139,North Kesteven,Lincolnshire,E10000019,6,Authority
+E07000140,South Holland,Lincolnshire,E10000019,6,Authority
+E07000141,South Kesteven,Lincolnshire,E10000019,6,Authority
+E07000142,West Lindsey,Lincolnshire,E10000019,6,Authority
+E10000021,Northamptonshire (abolished April 2021),East Midlands,E12000004,5,Upper level
+E07000150,Corby (abolished April 2021),Northamptonshire (abolished April 2021),E10000021,6,Authority
+E07000151,Daventry (abolished April 2021),Northamptonshire (abolished April 2021),E10000021,6,Authority
+E07000152,East Northamptonshire (abolished April 2021),Northamptonshire (abolished April 2021),E10000021,6,Authority
+E07000153,Kettering (abolished April 2021),Northamptonshire (abolished April 2021),E10000021,6,Authority
+E07000154,Northampton (abolished April 2021),Northamptonshire (abolished April 2021),E10000021,6,Authority
+E07000155,South Northamptonshire (abolished April 2021),Northamptonshire (abolished April 2021),E10000021,6,Authority
+E07000156,Wellingborough (abolished April 2021),Northamptonshire (abolished April 2021),E10000021,6,Authority
+E10000024,Nottinghamshire,East Midlands,E12000004,5,Upper level
+E07000170,Ashfield,Nottinghamshire,E10000024,6,Authority
+E07000171,Bassetlaw,Nottinghamshire,E10000024,6,Authority
+E07000172,Broxtowe,Nottinghamshire,E10000024,6,Authority
+E07000173,Gedling,Nottinghamshire,E10000024,6,Authority
+E07000174,Mansfield,Nottinghamshire,E10000024,6,Authority
+E07000175,Newark and Sherwood,Nottinghamshire,E10000024,6,Authority
+E07000176,Rushcliffe,Nottinghamshire,E10000024,6,Authority
+E12000005,West Midlands,England,E92000001,4,Region
+E06000019,"Herefordshire, County of",West Midlands,E12000005,5,Upper level
+E06000051,Shropshire,West Midlands,E12000005,5,Upper level
+E06000021,Stoke-on-Trent,West Midlands,E12000005,5,Upper level
+E06000020,Telford and Wrekin,West Midlands,E12000005,5,Upper level
+E10000028,Staffordshire,West Midlands,E12000005,5,Upper level
+E07000192,Cannock Chase,Staffordshire,E10000028,6,Authority
+E07000193,East Staffordshire,Staffordshire,E10000028,6,Authority
+E07000194,Lichfield,Staffordshire,E10000028,6,Authority
+E07000195,Newcastle-under-Lyme,Staffordshire,E10000028,6,Authority
+E07000196,South Staffordshire,Staffordshire,E10000028,6,Authority
+E07000197,Stafford,Staffordshire,E10000028,6,Authority
+E07000198,Staffordshire Moorlands,Staffordshire,E10000028,6,Authority
+E07000199,Tamworth,Staffordshire,E10000028,6,Authority
+E10000031,Warwickshire,West Midlands,E12000005,5,Upper level
+E07000218,North Warwickshire,Warwickshire,E10000031,6,Authority
+E07000219,Nuneaton and Bedworth,Warwickshire,E10000031,6,Authority
+E07000220,Rugby,Warwickshire,E10000031,6,Authority
+E07000221,Stratford-on-Avon,Warwickshire,E10000031,6,Authority
+E07000222,Warwick,Warwickshire,E10000031,6,Authority
+E11000005,West Midlands (Metropolitan County),West Midlands,E12000005,5,Upper level
+E08000025,Birmingham,West Midlands (Metropolitan County),E11000005,6,Authority
+E08000026,Coventry,West Midlands (Metropolitan County),E11000005,6,Authority
+E08000027,Dudley,West Midlands (Metropolitan County),E11000005,6,Authority
+E08000028,Sandwell,West Midlands (Metropolitan County),E11000005,6,Authority
+E08000029,Solihull,West Midlands (Metropolitan County),E11000005,6,Authority
+E08000030,Walsall,West Midlands (Metropolitan County),E11000005,6,Authority
+E08000031,Wolverhampton,West Midlands (Metropolitan County),E11000005,6,Authority
+E10000034,Worcestershire,West Midlands,E12000005,5,Upper level
+E07000234,Bromsgrove,Worcestershire,E10000034,6,Authority
+E07000235,Malvern Hills,Worcestershire,E10000034,6,Authority
+E07000236,Redditch,Worcestershire,E10000034,6,Authority
+E07000237,Worcester,Worcestershire,E10000034,6,Authority
+E07000238,Wychavon,Worcestershire,E10000034,6,Authority
+E07000239,Wyre Forest,Worcestershire,E10000034,6,Authority
+E12000006,East of England,England,E92000001,4,Region
+E06000055,Bedford,East of England,E12000006,5,Upper level
+E06000056,Central Bedfordshire,East of England,E12000006,5,Upper level
+E06000032,Luton,East of England,E12000006,5,Upper level
+E06000031,Peterborough,East of England,E12000006,5,Upper level
+E06000033,Southend-on-Sea,East of England,E12000006,5,Upper level
+E06000034,Thurrock,East of England,E12000006,5,Upper level
+E10000003,Cambridgeshire,East of England,E12000006,5,Upper level
+E07000008,Cambridge,Cambridgeshire,E10000003,6,Authority
+E07000009,East Cambridgeshire,Cambridgeshire,E10000003,6,Authority
+E07000010,Fenland,Cambridgeshire,E10000003,6,Authority
+E07000011,Huntingdonshire,Cambridgeshire,E10000003,6,Authority
+E07000012,South Cambridgeshire,Cambridgeshire,E10000003,6,Authority
+E10000012,Essex,East of England,E12000006,5,Upper level
+E07000066,Basildon,Essex,E10000012,6,Authority
+E07000067,Braintree,Essex,E10000012,6,Authority
+E07000068,Brentwood,Essex,E10000012,6,Authority
+E07000069,Castle Point,Essex,E10000012,6,Authority
+E07000070,Chelmsford,Essex,E10000012,6,Authority
+E07000071,Colchester,Essex,E10000012,6,Authority
+E07000072,Epping Forest,Essex,E10000012,6,Authority
+E07000073,Harlow,Essex,E10000012,6,Authority
+E07000074,Maldon,Essex,E10000012,6,Authority
+E07000075,Rochford,Essex,E10000012,6,Authority
+E07000076,Tendring,Essex,E10000012,6,Authority
+E07000077,Uttlesford,Essex,E10000012,6,Authority
+E10000015,Hertfordshire,East of England,E12000006,5,Upper level
+E07000095,Broxbourne,Hertfordshire,E10000015,6,Authority
+E07000096,Dacorum,Hertfordshire,E10000015,6,Authority
+E07000242,East Hertfordshire,Hertfordshire,E10000015,6,Authority
+E07000098,Hertsmere,Hertfordshire,E10000015,6,Authority
+E07000099,North Hertfordshire,Hertfordshire,E10000015,6,Authority
+E07000240,St Albans,Hertfordshire,E10000015,6,Authority
+E07000243,Stevenage,Hertfordshire,E10000015,6,Authority
+E07000102,Three Rivers,Hertfordshire,E10000015,6,Authority
+E07000103,Watford,Hertfordshire,E10000015,6,Authority
+E07000241,Welwyn Hatfield,Hertfordshire,E10000015,6,Authority
+E10000020,Norfolk,East of England,E12000006,5,Upper level
+E07000143,Breckland,Norfolk,E10000020,6,Authority
+E07000144,Broadland,Norfolk,E10000020,6,Authority
+E07000145,Great Yarmouth,Norfolk,E10000020,6,Authority
+E07000146,King's Lynn and West Norfolk,Norfolk,E10000020,6,Authority
+E07000147,North Norfolk,Norfolk,E10000020,6,Authority
+E07000148,Norwich,Norfolk,E10000020,6,Authority
+E07000149,South Norfolk,Norfolk,E10000020,6,Authority
+E10000029,Suffolk,East of England,E12000006,5,Upper level
+E07000200,Babergh,Suffolk,E10000029,6,Authority
+E07000244,East Suffolk,Suffolk,E10000029,6,Authority
+E07000202,Ipswich,Suffolk,E10000029,6,Authority
+E07000203,Mid Suffolk,Suffolk,E10000029,6,Authority
+E07000245,West Suffolk,Suffolk,E10000029,6,Authority
+E12000007,London,England,E92000001,4,Region
+E13000001,Inner London,London,E12000007,5,Upper level
+E09000007,Camden,Inner London,E13000001,6,Authority
+E09000001,City of London,Inner London,E13000001,6,Authority
+E09000012,Hackney,Inner London,E13000001,6,Authority
+E09000013,Hammersmith and Fulham,Inner London,E13000001,6,Authority
+E09000014,Haringey,Inner London,E13000001,6,Authority
+E09000019,Islington,Inner London,E13000001,6,Authority
+E09000020,Kensington and Chelsea,Inner London,E13000001,6,Authority
+E09000022,Lambeth,Inner London,E13000001,6,Authority
+E09000023,Lewisham,Inner London,E13000001,6,Authority
+E09000025,Newham,Inner London,E13000001,6,Authority
+E09000028,Southwark,Inner London,E13000001,6,Authority
+E09000030,Tower Hamlets,Inner London,E13000001,6,Authority
+E09000032,Wandsworth,Inner London,E13000001,6,Authority
+E09000033,Westminster,Inner London,E13000001,6,Authority
+E13000002,Outer London,London,E12000007,5,Upper level
+E09000002,Barking and Dagenham,Outer London,E13000002,6,Authority
+E09000003,Barnet,Outer London,E13000002,6,Authority
+E09000004,Bexley,Outer London,E13000002,6,Authority
+E09000005,Brent,Outer London,E13000002,6,Authority
+E09000006,Bromley,Outer London,E13000002,6,Authority
+E09000008,Croydon,Outer London,E13000002,6,Authority
+E09000009,Ealing,Outer London,E13000002,6,Authority
+E09000010,Enfield,Outer London,E13000002,6,Authority
+E09000011,Greenwich,Outer London,E13000002,6,Authority
+E09000015,Harrow,Outer London,E13000002,6,Authority
+E09000016,Havering,Outer London,E13000002,6,Authority
+E09000017,Hillingdon,Outer London,E13000002,6,Authority
+E09000018,Hounslow,Outer London,E13000002,6,Authority
+E09000021,Kingston upon Thames,Outer London,E13000002,6,Authority
+E09000024,Merton,Outer London,E13000002,6,Authority
+E09000026,Redbridge,Outer London,E13000002,6,Authority
+E09000027,Richmond upon Thames,Outer London,E13000002,6,Authority
+E09000029,Sutton,Outer London,E13000002,6,Authority
+E09000031,Waltham Forest,Outer London,E13000002,6,Authority
+E12000008,South East,England,E92000001,4,Region
+E06000036,Bracknell Forest,South East,E12000008,5,Upper level
+E06000043,Brighton and Hove,South East,E12000008,5,Upper level
+E06000046,Isle of Wight,South East,E12000008,5,Upper level
+E06000035,Medway,South East,E12000008,5,Upper level
+E06000042,Milton Keynes,South East,E12000008,5,Upper level
+E06000044,Portsmouth,South East,E12000008,5,Upper level
+E06000038,Reading,South East,E12000008,5,Upper level
+E06000039,Slough,South East,E12000008,5,Upper level
+E06000045,Southampton,South East,E12000008,5,Upper level
+E06000037,West Berkshire,South East,E12000008,5,Upper level
+E06000040,Windsor and Maidenhead,South East,E12000008,5,Upper level
+E06000041,Wokingham,South East,E12000008,5,Upper level
+E06000060,Buckinghamshire,South East,E12000008,5,Upper level
+E10000011,East Sussex,South East,E12000008,5,Upper level
+E07000061,Eastbourne,East Sussex,E10000011,6,Authority
+E07000062,Hastings,East Sussex,E10000011,6,Authority
+E07000063,Lewes,East Sussex,E10000011,6,Authority
+E07000064,Rother,East Sussex,E10000011,6,Authority
+E07000065,Wealden,East Sussex,E10000011,6,Authority
+E10000014,Hampshire,South East,E12000008,5,Upper level
+E07000084,Basingstoke and Deane,Hampshire,E10000014,6,Authority
+E07000085,East Hampshire,Hampshire,E10000014,6,Authority
+E07000086,Eastleigh,Hampshire,E10000014,6,Authority
+E07000087,Fareham,Hampshire,E10000014,6,Authority
+E07000088,Gosport,Hampshire,E10000014,6,Authority
+E07000089,Hart,Hampshire,E10000014,6,Authority
+E07000090,Havant,Hampshire,E10000014,6,Authority
+E07000091,New Forest,Hampshire,E10000014,6,Authority
+E07000092,Rushmoor,Hampshire,E10000014,6,Authority
+E07000093,Test Valley,Hampshire,E10000014,6,Authority
+E07000094,Winchester,Hampshire,E10000014,6,Authority
+E10000016,Kent,South East,E12000008,5,Upper level
+E07000105,Ashford,Kent,E10000016,6,Authority
+E07000106,Canterbury,Kent,E10000016,6,Authority
+E07000107,Dartford,Kent,E10000016,6,Authority
+E07000108,Dover,Kent,E10000016,6,Authority
+E07000112,Folkestone and Hythe,Kent,E10000016,6,Authority
+E07000109,Gravesham,Kent,E10000016,6,Authority
+E07000110,Maidstone,Kent,E10000016,6,Authority
+E07000111,Sevenoaks,Kent,E10000016,6,Authority
+E07000113,Swale,Kent,E10000016,6,Authority
+E07000114,Thanet,Kent,E10000016,6,Authority
+E07000115,Tonbridge and Malling,Kent,E10000016,6,Authority
+E07000116,Tunbridge Wells,Kent,E10000016,6,Authority
+E10000025,Oxfordshire,South East,E12000008,5,Upper level
+E07000177,Cherwell,Oxfordshire,E10000025,6,Authority
+E07000178,Oxford,Oxfordshire,E10000025,6,Authority
+E07000179,South Oxfordshire,Oxfordshire,E10000025,6,Authority
+E07000180,Vale of White Horse,Oxfordshire,E10000025,6,Authority
+E07000181,West Oxfordshire,Oxfordshire,E10000025,6,Authority
+E10000030,Surrey,South East,E12000008,5,Upper level
+E07000207,Elmbridge,Surrey,E10000030,6,Authority
+E07000208,Epsom and Ewell,Surrey,E10000030,6,Authority
+E07000209,Guildford,Surrey,E10000030,6,Authority
+E07000210,Mole Valley,Surrey,E10000030,6,Authority
+E07000211,Reigate and Banstead,Surrey,E10000030,6,Authority
+E07000212,Runnymede,Surrey,E10000030,6,Authority
+E07000213,Spelthorne,Surrey,E10000030,6,Authority
+E07000214,Surrey Heath,Surrey,E10000030,6,Authority
+E07000215,Tandridge,Surrey,E10000030,6,Authority
+E07000216,Waverley,Surrey,E10000030,6,Authority
+E07000217,Woking,Surrey,E10000030,6,Authority
+E10000032,West Sussex,South East,E12000008,5,Upper level
+E07000223,Adur,West Sussex,E10000032,6,Authority
+E07000224,Arun,West Sussex,E10000032,6,Authority
+E07000225,Chichester,West Sussex,E10000032,6,Authority
+E07000226,Crawley,West Sussex,E10000032,6,Authority
+E07000227,Horsham,West Sussex,E10000032,6,Authority
+E07000228,Mid Sussex,West Sussex,E10000032,6,Authority
+E07000229,Worthing,West Sussex,E10000032,6,Authority
+E12000009,South West,England,E92000001,4,Region
+E06000022,Bath and North East Somerset,South West,E12000009,5,Upper level
+E06000058,"Bournemouth, Christchurch and Poole",South West,E12000009,5,Upper level
+E06000023,"Bristol, City of",South West,E12000009,5,Upper level
+E06000052,Cornwall,South West,E12000009,5,Upper level
+E06000059,Dorset,South West,E12000009,5,Upper level
+E06000053,Isles of Scilly,South West,E12000009,5,Upper level
+E06000024,North Somerset,South West,E12000009,5,Upper level
+E06000026,Plymouth,South West,E12000009,5,Upper level
+E06000066,Somerset (from April 2023),South West,E12000009,5,Upper level
+E06000025,South Gloucestershire,South West,E12000009,5,Upper level
+E06000030,Swindon,South West,E12000009,5,Upper level
+E06000027,Torbay,South West,E12000009,5,Upper level
+E06000054,Wiltshire,South West,E12000009,5,Upper level
+E10000008,Devon,South West,E12000009,5,Upper level
+E07000040,East Devon,Devon,E10000008,6,Authority
+E07000041,Exeter,Devon,E10000008,6,Authority
+E07000042,Mid Devon,Devon,E10000008,6,Authority
+E07000043,North Devon,Devon,E10000008,6,Authority
+E07000044,South Hams,Devon,E10000008,6,Authority
+E07000045,Teignbridge,Devon,E10000008,6,Authority
+E07000046,Torridge,Devon,E10000008,6,Authority
+E07000047,West Devon,Devon,E10000008,6,Authority
+E10000013,Gloucestershire,South West,E12000009,5,Upper level
+E07000078,Cheltenham,Gloucestershire,E10000013,6,Authority
+E07000079,Cotswold,Gloucestershire,E10000013,6,Authority
+E07000080,Forest of Dean,Gloucestershire,E10000013,6,Authority
+E07000081,Gloucester,Gloucestershire,E10000013,6,Authority
+E07000082,Stroud,Gloucestershire,E10000013,6,Authority
+E07000083,Tewkesbury,Gloucestershire,E10000013,6,Authority
+E10000027,Somerset (abolished April 2023),South West,E12000009,5,Upper level
+E07000187,Mendip (abolished April 2023),Somerset (abolished April 2023),E10000027,6,Authority
+E07000188,Sedgemoor (abolished April 2023),Somerset (abolished April 2023),E10000027,6,Authority
+E07000246,Somerset West and Taunton (abolished April 2023),Somerset (abolished April 2023),E10000027,6,Authority
+E07000189,South Somerset (abolished April 2023),Somerset (abolished April 2023),E10000027,6,Authority
+W92000004,Wales,Great Britain,K03000001,3,Country
+W06000001,Isle of Anglesey,Wales,W92000004,5,Upper level
+W06000002,Gwynedd,Wales,W92000004,5,Upper level
+W06000003,Conwy,Wales,W92000004,5,Upper level
+W06000004,Denbighshire,Wales,W92000004,5,Upper level
+W06000005,Flintshire,Wales,W92000004,5,Upper level
+W06000006,Wrexham,Wales,W92000004,5,Upper level
+W06000023,Powys,Wales,W92000004,5,Upper level
+W06000008,Ceredigion,Wales,W92000004,5,Upper level
+W06000009,Pembrokeshire,Wales,W92000004,5,Upper level
+W06000010,Carmarthenshire,Wales,W92000004,5,Upper level
+W06000011,Swansea,Wales,W92000004,5,Upper level
+W06000012,Neath Port Talbot,Wales,W92000004,5,Upper level
+W06000013,Bridgend,Wales,W92000004,5,Upper level
+W06000014,The Vale of Glamorgan,Wales,W92000004,5,Upper level
+W06000015,Cardiff,Wales,W92000004,5,Upper level
+W06000016,Rhondda Cynon Taf,Wales,W92000004,5,Upper level
+W06000024,Merthyr Tydfil,Wales,W92000004,5,Upper level
+W06000018,Caerphilly,Wales,W92000004,5,Upper level
+W06000019,Blaenau Gwent,Wales,W92000004,5,Upper level
+W06000020,Torfaen,Wales,W92000004,5,Upper level
+W06000021,Monmouthshire,Wales,W92000004,5,Upper level
+W06000022,Newport,Wales,W92000004,5,Upper level
+S92000003,Scotland,Great Britain,K03000001,3,Country
+S12000033,Aberdeen City,Scotland,S92000003,5,Upper level
+S12000034,Aberdeenshire,Scotland,S92000003,5,Upper level
+S12000041,Angus,Scotland,S92000003,5,Upper level
+S12000035,Argyll & Bute,Scotland,S92000003,5,Upper level
+S12000036,City of Edinburgh,Scotland,S92000003,5,Upper level
+S12000005,Clackmannanshire,Scotland,S92000003,5,Upper level
+S12000006,Dumfries & Galloway,Scotland,S92000003,5,Upper level
+S12000042,Dundee City,Scotland,S92000003,5,Upper level
+S12000008,East Ayrshire,Scotland,S92000003,5,Upper level
+S12000045,East Dunbartonshire,Scotland,S92000003,5,Upper level
+S12000010,East Lothian,Scotland,S92000003,5,Upper level
+S12000011,East Renfrewshire,Scotland,S92000003,5,Upper level
+S12000014,Falkirk,Scotland,S92000003,5,Upper level
+S12000047,Fife,Scotland,S92000003,5,Upper level
+S12000049,Glasgow City,Scotland,S92000003,5,Upper level
+S12000017,Highland,Scotland,S92000003,5,Upper level
+S12000018,Inverclyde,Scotland,S92000003,5,Upper level
+S12000019,Midlothian,Scotland,S92000003,5,Upper level
+S12000020,Moray,Scotland,S92000003,5,Upper level
+S12000013,Na h-Eileanan Siar,Scotland,S92000003,5,Upper level
+S12000021,North Ayrshire,Scotland,S92000003,5,Upper level
+S12000050,North Lanarkshire,Scotland,S92000003,5,Upper level
+S12000023,Orkney Islands,Scotland,S92000003,5,Upper level
+S12000048,Perth & Kinross,Scotland,S92000003,5,Upper level
+S12000038,Renfrewshire,Scotland,S92000003,5,Upper level
+S12000026,Scottish Borders,Scotland,S92000003,5,Upper level
+S12000027,Shetland Islands,Scotland,S92000003,5,Upper level
+S12000028,South Ayrshire,Scotland,S92000003,5,Upper level
+S12000029,South Lanarkshire,Scotland,S92000003,5,Upper level
+S12000030,Stirling,Scotland,S92000003,5,Upper level
+S12000039,West Dunbartonshire,Scotland,S92000003,5,Upper level
+S12000040,West Lothian,Scotland,S92000003,5,Upper level
+N92000002,Northern Ireland,United Kingdom,K02000001,3,Country
+N09000001,Antrim and Newtownabbey,Northern Ireland,N92000002,5,Upper level
+N09000011,Ards and North Down,Northern Ireland,N92000002,5,Upper level
+N09000002,"Armagh City, Banbridge and Craigavon",Northern Ireland,N92000002,5,Upper level
+N09000003,Belfast,Northern Ireland,N92000002,5,Upper level
+N09000004,Causeway Coast and Glens,Northern Ireland,N92000002,5,Upper level
+N09000005,Derry City and Strabane,Northern Ireland,N92000002,5,Upper level
+N09000006,Fermanagh and Omagh,Northern Ireland,N92000002,5,Upper level
+N09000007,Lisburn and Castlereagh,Northern Ireland,N92000002,5,Upper level
+N09000008,Mid and East Antrim,Northern Ireland,N92000002,5,Upper level
+N09000009,Mid Ulster,Northern Ireland,N92000002,5,Upper level
+N09000010,"Newry, Mourne and Down",Northern Ireland,N92000002,5,Upper level
