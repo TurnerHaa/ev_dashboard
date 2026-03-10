@@ -14,19 +14,25 @@ from datetime import date
 # ============================================================
 # CONFIGURATION
 # ============================================================
+# Check for a full URL first (easy for local override), 
+# then fallback to individual components
 DB_URL = os.getenv("DATABASE_URL")
 
-# Fallback to .env only if the environment variable isn't found
 if not DB_URL:
-    load_dotenv("ev_dashboard.env")
-    DB_URL = os.getenv("DATABASE_URL")
+    # Build the URL from individual components if DATABASE_URL isn't provided
+    user = os.getenv("DB_USER")
+    password = os.getenv("DB_PASSWORD")
+    host = os.getenv("DB_HOST")
+    db_name = os.getenv("DB_NAME", "postgres") # Defaults to 'postgres'
+    port = os.getenv("DB_PORT", "5432")
+    
+    DB_URL = f"postgresql://{user}:{password}@{host}:{port}/{db_name}"
 
 if not DB_URL:
-    raise ValueError("CRITICAL: DATABASE_URL environment variable is not set!")
+    raise ValueError("CRITICAL: No Database connection information found!")
 
 try:
     engine = create_engine(DB_URL)
-    # Test connection
     with engine.connect() as conn:
         conn.execute(text("SELECT 1"))
     print("Database connection successfully verified.")

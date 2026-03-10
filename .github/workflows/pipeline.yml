@@ -32,9 +32,9 @@ jobs:
             outputs:
               dev:
                 type: postgres # Change to your DB type (snowflake, etc)
-                host: ${{ secrets.DB_HOST }}
-                user: ${{ secrets.DB_USER }}
-                password: ${{ secrets.DB_PASSWORD }}
+                host: \"{{ env_var('DB_HOST') }}\"
+                user: \"{{ env_var('DB_USER') }}\"
+                password: \"{{ env_var('DB_PASSWORD') }}\"
                 port: 5432
                 dbname: postgres
                 schema: public
@@ -44,5 +44,7 @@ jobs:
 
       - name: Run Python Pipeline
         env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
         run: python ev_pipeline.py
