@@ -19,10 +19,6 @@ from datetime import date
 load_dotenv("ev_dashboard.env")
 
 DB_URL = os.getenv("DATABASE_URL")
-# TWILIO_SID = os.getenv("TWILIO_SID")
-# TWILIO_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
-# TWILIO_FROM = os.getenv("TWILIO_PHONE_NUMBER")
-# USER_PHONE = os.getenv("USER_PHONE_NUMBER")
 
 # ============================================================
 # INITIALIZE CLIENTS
@@ -40,21 +36,22 @@ def run_pipeline():
 
     # pull raw chargers data 
     print("Step 1: Checking for latest chargers data on GOV.UK...")
-    base_url = 'https://www.gov.uk/government/collections/electric-vehicle-charging-infrastructure-statistics'
-    reqs = requests.get(base_url)
-    soup = BeautifulSoup(reqs.text, 'html.parser')
+    # base_url = 'https://www.gov.uk/government/statistical-data-sets/electric-vehicle-charging-infrastructure-statistics-data-tables-evci'
+    # reqs = requests.get(base_url)
+    # soup = BeautifulSoup(reqs.text, 'html.parser')
 
     # find link to relevant gov data
-    links = [link.get('href') for link in soup.find_all('a') if link.get('href')]
-    data_page = next(l for l in links if ('https://www.gov.uk/government/statistics/electric-vehicle-public-charging-infrastructure-statistics') 
-                     in l)
+    # links = [link.get('href') for link in soup.find_all('a') if link.get('href')]
+    # data_page = next(l for l in links if ('https://www.gov.uk/government/statistics/electric-vehicle-public-charging-infrastructure-statistics') 
+    #                  in l)
 
     # pull EV charger dowload link
-    ch_req = requests.get(data_page)
+    base_url = 'https://www.gov.uk/government/statistical-data-sets/electric-vehicle-charging-infrastructure-statistics-data-tables-evci'
+    ch_req = requests.get(base_url)
     ch_soup = BeautifulSoup(ch_req.text, 'html.parser')
 
     ch_url = next(link.get('href') for link in ch_soup.find_all('a')
-                         if link.get('href').startswith('https://assets.publishing.service.gov.uk/media/'))
+                         if 'evci9001_' in link.get('href'))
     
     file_id = ch_url.split('/')[-2]
 
@@ -370,8 +367,25 @@ def run_pipeline():
     # remove top row notes
     urban_rural = ch_data['6a'].iloc[2:]
 
-    # set top row as col titles
-    urban_rural.columns = urban_rural.iloc[0]
+    # 2. Convert each item: if it's a date, format it; if it's text, strip it
+    urban_rural.columns = [
+        val.strftime('%b-%y') if hasattr(val, 'strftime') else str(val).strip() 
+        for val in urban_rural.iloc[0]
+    ]
+
+    # 3. Drop the now-redundant first row from the data
+    urban_rural = urban_rural.iloc[1:].reset_index(drop=True)
+
+    urban_rural.drop(urban_rural.tail(1).index,inplace=True)
+
+    # urban_rural = urban_rural.iloc[1:]
+
+    # clean column names
+    urban_rural.columns = (
+        urban_rural.columns
+        .str.replace(r'\[.*?\]', '', regex=True)
+        .str.strip()
+    )
 
     # remove notes
     urban_rural.loc[:,'Rural urban classification'] = (
@@ -380,12 +394,12 @@ def run_pipeline():
         .str.strip()
     )
 
-    # Focus on main class categories and remove totals
-    filtered_urban_rural = ['Total charging devices in rural areas', 'Total charging devices in urban areas', 'Unknown classification']
+    # # Focus on main class categories and remove totals
+    # filtered_urban_rural = ['Total charging devices in rural areas', 'Total charging devices in urban areas', 'Unknown classification']
 
-    urban_rural = urban_rural[urban_rural['Rural urban classification'].isin (filtered_urban_rural)].copy()
+    # urban_rural = urban_rural[urban_rural['Rural urban classification'].isin (filtered_urban_rural)].copy()
 
-    # rename col
+    # # rename col
     urban_rural = urban_rural.rename(
         columns={'Rural urban classification': 'area_type'}
     )

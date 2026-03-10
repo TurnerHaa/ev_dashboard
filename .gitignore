@@ -1,0 +1,5 @@
+ev_dashboard.env
+.vscode/settings.json
+ev_transform/target/
+ev_transform/dbt_packages/
+ev_transform/logs/

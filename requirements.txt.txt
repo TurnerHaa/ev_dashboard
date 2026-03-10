@@ -1,0 +1,9 @@
+pandas
+requests
+beautifulsoup4
+sqlalchemy
+psycopg2-binary
+odfpy
+python-dotenv
+dbt-core
+dbt-postgres
