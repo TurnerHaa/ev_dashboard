@@ -8,26 +8,31 @@ import os
 from bs4 import BeautifulSoup
 from sqlalchemy import create_engine, text
 from pathlib import Path
-# from twilio.rest import Client
 from dotenv import load_dotenv
 from datetime import date
 
 # ============================================================
 # CONFIGURATION
 # ============================================================
-
-load_dotenv("ev_dashboard.env")
-
 DB_URL = os.getenv("DATABASE_URL")
 
-# ============================================================
-# INITIALIZE CLIENTS
-# ============================================================
+# Fallback to .env only if the environment variable isn't found
+if not DB_URL:
+    load_dotenv("ev_dashboard.env")
+    DB_URL = os.getenv("DATABASE_URL")
+
+if not DB_URL:
+    raise ValueError("CRITICAL: DATABASE_URL environment variable is not set!")
+
 try:
     engine = create_engine(DB_URL)
-    print("Database engine successfully created.")
-except:
-    print("Error: No DB Engine detected")
+    # Test connection
+    with engine.connect() as conn:
+        conn.execute(text("SELECT 1"))
+    print("Database connection successfully verified.")
+except Exception as e:
+    print(f"Error: Could not connect to the database: {e}")
+    exit(1)
 
 def run_pipeline():
     # ============================================================

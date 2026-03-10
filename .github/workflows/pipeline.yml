@@ -1,0 +1,48 @@
+name: EV Data Pipeline
+
+on:
+  schedule:
+    - cron: '0 0 * * 1' # Runs every Monday at midnight
+  workflow_dispatch:   # Allows you to run it manually from the GitHub UI
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+          # Specific engine needed for your pd.read_excel(engine='odf') calls
+          pip install odfpy 
+
+      - name: Setup dbt Profile
+        run: |
+          mkdir -p ~/.dbt
+          echo "
+          ev_project:
+            outputs:
+              dev:
+                type: postgres # Change to your DB type (snowflake, etc)
+                host: ${{ secrets.DB_HOST }}
+                user: ${{ secrets.DB_USER }}
+                password: ${{ secrets.DB_PASSWORD }}
+                port: 5432
+                dbname: postgres
+                schema: public
+                threads: 1
+            target: dev
+          " > ~/.dbt/profiles.yml
+
+      - name: Run Python Pipeline
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: python ev_pipeline.py
