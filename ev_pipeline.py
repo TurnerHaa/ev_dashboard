@@ -20,11 +20,11 @@ DB_URL = os.getenv("DATABASE_URL")
 
 if not DB_URL:
     # Build the URL from individual components if DATABASE_URL isn't provided
-    user = os.getenv("DB_USER")
-    password = os.getenv("DB_PASSWORD")
-    host = os.getenv("DB_HOST")
-    db_name = os.getenv("DB_NAME", "postgres") # Defaults to 'postgres'
-    port = os.getenv("DB_PORT", "5432")
+    user = os.getenv("DATABASE_USER")
+    password = os.getenv("DATABASE_PASSWORD")
+    host = os.getenv("DATABASE_HOST")
+    db_name = os.getenv("DATABASE_NAME", "postgres") # Defaults to 'postgres'
+    port = os.getenv("DATABASE_PORT", "5432")
     
     DB_URL = f"postgresql://{user}:{password}@{host}:{port}/{db_name}"
 
