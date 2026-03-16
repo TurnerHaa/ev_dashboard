@@ -3,7 +3,7 @@ name: EV Data Pipeline
 on:
   schedule:
     - cron: '0 0 * * 1' # Runs every Monday at midnight
-  workflow_dispatch:   # Allows you to run it manually from the GitHub UI
+  workflow_dispatch:
 
 jobs:
   run-pipeline:
