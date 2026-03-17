@@ -11,4 +11,5 @@
 This ETL pipeline automatically ingests quarterly and monthly DfT (Department for Transport) statistics, transforms them into a unified schema, and feeds a Power BI Dashboard. This allows anyone—from local councillors to EV advocates—to visualize charger density and vehicle adoption across all UK regions.
 
 ## The process
-<img width="1690" height="840" alt="image" src="https://github.com/user-attachments/assets/adc06a74-534b-4d0d-9fcc-9136e6eda92e" />
+<img width="1640" height="746" alt="ETL" src="https://github.com/user-attachments/assets/31cd4315-ff1e-4153-b988-3ea84a9ee837" />
+
