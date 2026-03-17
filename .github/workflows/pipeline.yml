@@ -32,11 +32,11 @@ jobs:
       - name: Setup dbt Profile
         run: |
           mkdir -p ~/.dbt
-          echo "
+          cat << 'EOF' > ~/.dbt/profiles.yml
           ev_project:
             outputs:
               dev:
-                type: postgres # Change to your DB type (snowflake, etc)
+                type: postgres
                 host: "{{ env_var('DB_HOST') }}"
                 user: "{{ env_var('DB_USER') }}"
                 password: "{{ env_var('DB_PASSWORD') }}"
@@ -45,7 +45,7 @@ jobs:
                 schema: public
                 threads: 1
             target: dev
-          " > ~/.dbt/profiles.yml
+          EOF
 
       - name: Run Python Pipeline
         run: python ev_pipeline.py
