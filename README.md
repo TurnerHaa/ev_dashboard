@@ -4,15 +4,10 @@
 
 ## Overview
 
-### Context:
-1 in 5 vehicles sold in the UK are now electric. But this rollout will stall if the UK lacks the charging infrastructure necessary to make EVs viable for all travellers, on all journeys, in all regions.
+### The Problem: 
+1 in 5 vehicles sold in the UK are now electric, but the infrastructure rollout risks stalling. Vital data for policymakers is currently locked in dense, quarterly GOV.UK reports, making it difficult to track regional disparities or real-time progress.
 
-### The challenge:
-The data policymakers need to monitor charger availability in their towns, local authorities and regions are stored in dense quarterly reports from GOV.UK. 
-
-Unlocking decision-ready insights requires further analysis and visualization. 
-
-### The idea:
-An ETL data pipeline that pulls the latest GOV.UK charging statistics into a PowerBI dashboard where anyone can compare EV charger and vehicle data over time and between geographic areas.
+### The Solution: 
+This ETL pipeline automatically ingests quarterly and monthly DfT (Department for Transport) statistics, transforms them into a unified schema, and feeds a Power BI Dashboard. This allows anyone—from local councillors to EV advocates—to visualize charger density and vehicle adoption across all UK regions.
 
 ## The process
