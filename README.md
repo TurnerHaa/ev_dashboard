@@ -1,6 +1,6 @@
 # UK Electric Vehicles Data Pipeline
 
-<img width="2052" height="1153" alt="image" src="https://github.com/user-attachments/assets/4de0bd32-fec6-4d3d-b9d4-7db5f966ba35" />
+![2026-03-18-17-32-57](https://github.com/user-attachments/assets/30dd8d64-5168-4f4d-837e-f62fd4207880)
 
 ## Overview
 
