@@ -1,6 +1,9 @@
 # UK Electric Vehicles Data Pipeline
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffffff)
 ![Supabase](https://img.shields.io/badge/supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=ffffff)
+![Pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=ffffff)
+![Postgres](https://img.shields.io/badge/postgresql-4169E1?style=for-the-badge&logo=postgres&logoColor=ffffff)
+
 
 ![2026-03-18-17-32-57](https://github.com/user-attachments/assets/30dd8d64-5168-4f4d-837e-f62fd4207880)
 
@@ -14,7 +17,9 @@ This ETL pipeline automatically ingests quarterly and monthly DfT (Department fo
 <img width="1640" height="746" alt="ETL" src="https://github.com/user-attachments/assets/31cd4315-ff1e-4153-b988-3ea84a9ee837" />
 
 ## 🛠 Tech Stack
-Data scraping + cleaning: React + Vite — Chosen for near-instant HMR (Hot Module Replacement) during development.
+Data scraping + cleaning: Python + Beautiful Soup — Chosen for near-instant HMR (Hot Module Replacement) during development.
+
+Load: SQLAlchemy + dbt — PLACEHOLDER
 
 Database: Supabase (PostgreSQL) — Selected over Redux to keep the boilerplate minimal for this specific scale of state complexity.
 
