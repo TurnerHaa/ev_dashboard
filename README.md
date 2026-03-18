@@ -1,4 +1,6 @@
 # UK Electric Vehicles Data Pipeline
+![2026-03-18-17-32-57](https://github.com/user-attachments/assets/30dd8d64-5168-4f4d-837e-f62fd4207880)
+
 ### The Problem: 
 1 in 5 vehicles sold in the UK are now electric, but the infrastructure rollout risks stalling. Vital data for policymakers is currently locked in dense, quarterly GOV.UK reports, making it difficult to track regional disparities or real-time progress.
 
@@ -13,4 +15,3 @@ This ETL pipeline automatically ingests quarterly and monthly DfT (Department fo
 
 
 
-![2026-03-18-17-32-57](https://github.com/user-attachments/assets/30dd8d64-5168-4f4d-837e-f62fd4207880)
