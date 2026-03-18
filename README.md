@@ -18,15 +18,15 @@ This ETL pipeline automatically ingests quarterly and monthly DfT (Department fo
 <img width="1640" height="746" alt="ETL" src="https://github.com/user-attachments/assets/31cd4315-ff1e-4153-b988-3ea84a9ee837" />
 
 ## 🛠 Tech Stack
-**Data collection + cleaning:** Python + Pandas + Beautiful Soup — For scraping data into 
+\* **Data collection + cleaning:** Python + Pandas + Beautiful Soup — For scraping data into 
 
-**Load:** SQLAlchemy + dbt — PLACEHOLDER
+\* **Load:** SQLAlchemy + dbt — PLACEHOLDER
 
-**Database:** Supabase (PostgreSQL) — Chosen for simplicity and 
+\* **Database:** Supabase (PostgreSQL) — Chosen for simplicity and 
 
-**Visualization:** PowerBI — Used to visualize data and explore core insights.
+\* **Visualization:** PowerBI — Used to visualize data and explore core insights.
 
-**Scheduling:** GitHub Actions — For automatically checking for new data and re-running the pipeline when new values are found.
+\* **Scheduling:** GitHub Actions — For automatically checking for new data and re-running the pipeline when new values are found.
 
 ## 🏔️ Challenges
 
