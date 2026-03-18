@@ -4,6 +4,7 @@
 ![Pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=ffffff)
 ![Postgres](https://img.shields.io/badge/postgresql-4169E1?style=for-the-badge&logo=postgresql&logoColor=ffffff)
 ![dbt](https://img.shields.io/badge/dbt-FF694B?style=for-the-badge&logo=dbt&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=power-bi&logoColor=black)
 
 ![2026-03-18-17-32-57](https://github.com/user-attachments/assets/30dd8d64-5168-4f4d-837e-f62fd4207880)
 
@@ -17,10 +18,23 @@ This ETL pipeline automatically ingests quarterly and monthly DfT (Department fo
 <img width="1640" height="746" alt="ETL" src="https://github.com/user-attachments/assets/31cd4315-ff1e-4153-b988-3ea84a9ee837" />
 
 ## 🛠 Tech Stack
-Data scraping + cleaning: Python + Beautiful Soup — Chosen for near-instant HMR (Hot Module Replacement) during development.
+**Data collection + cleaning:** Python + Pandas + Beautiful Soup — For scraping data into 
 
-Load: SQLAlchemy + dbt — PLACEHOLDER
+**Load:** SQLAlchemy + dbt — PLACEHOLDER
 
-Database: Supabase (PostgreSQL) — Selected over Redux to keep the boilerplate minimal for this specific scale of state complexity.
+**Database:** Supabase (PostgreSQL) — Chosen for simplicity and 
 
-Visualization: PowerBI — Used to leverage Row Level Security (RLS) and real-time subscriptions without building a custom backend.
+**Visualization:** PowerBI — Used to visualize data and explore core insights.
+
+**Scheduling:** GitHub Actions — For automatically checking for new data and re-running the pipeline when new values are found.
+
+## 🏔️ Challenges
+
+
+## ⚡ How to run it
+
+
+## 📊 Key insights
+
+
+## 💡Future expansion
