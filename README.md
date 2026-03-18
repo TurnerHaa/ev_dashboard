@@ -32,6 +32,9 @@ This ETL pipeline automatically ingests quarterly and monthly DfT (Department fo
 #### RAGGED HIERARCHY ####
 PowerBI lacks an easy way to deal with ragged hierarchies. However, these are critical for users to easily switch between different tiers of UK geographies and build an analysis that matches their decision making range.
 
+The solution was to create a filtered hierarchy table. Here, each row represents a distint UK region and columns *level1* to *level6* indicate the 'family tree' leading to that respective region.
+
+<img width="2118" height="766" alt="image" src="https://github.com/user-attachments/assets/a2eff881-94e6-4573-b1b9-1920f542097f" />
 
 
 
