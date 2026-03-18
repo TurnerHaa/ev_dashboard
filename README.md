@@ -2,8 +2,7 @@
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffffff)
 ![Supabase](https://img.shields.io/badge/supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=ffffff)
 ![Pandas](https://img.shields.io/badge/pandas-%150458?style=for-the-badge&logo=pandas&logoColor=ffffff)
-![Postgres](https://img.shields.io/badge/postgresql-%4169E1?style=for-the-badge&logo=postgres&logoColor=ffffff)
-
+![Postgres](https://img.shields.io/badge/postgresql-4169E1?style=for-the-badge&logo=postgresql&logoColor=ffffff)
 
 ![2026-03-18-17-32-57](https://github.com/user-attachments/assets/30dd8d64-5168-4f4d-837e-f62fd4207880)
 
