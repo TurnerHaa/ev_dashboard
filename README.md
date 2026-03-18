@@ -42,4 +42,10 @@ This ETL pipeline automatically ingests quarterly and monthly DfT (Department fo
 
 \* Allow toggle between total chargers and chargers per 100k on primary bar chart
 
+\* Partition chargers and vehicles tables for faster recursive CTE passovers
+
+\* Build views for more focused data ingestion from Supabase
+
+\* Turn repeated Python code into functions to improve codebase structure
+
 \* Create separate page for chargers data which reports more frequently than EV licensing data
