@@ -29,14 +29,39 @@ This ETL pipeline automatically ingests quarterly and monthly DfT (Department fo
 \* **Scheduling:** (GitHub Actions) — For automatically checking for new data and re-running the pipeline when new values are found.
 
 ## 🏔️ Challenges
-RAGGED HIERARCHY
+#### RAGGED HIERARCHY ####
+PowerBI lacks an easy way to deal with ragged hierarchies. However, these are critical for users to easily switch between different tiers of UK geographies and build an analysis that matches their decision making range.
+
+
 
 
 
 ## ⚡ How to run it
 
-DRAW SCHEMA
-
+erDiagram
+    DIM_CALENDAR ||--o{ FACT_CHARGERS : "date_key"
+    DIM_CALENDAR ||--o{ FACT_EVS : "date_key"
+    DIM_GEOGRAPHY ||--o{ FACT_CHARGERS : "region_ons"
+    DIM_GEOGRAPHY ||--o{ FACT_EVS : "region_ons"
+    
+    FACT_CHARGERS {
+        string region_ons
+        date date
+        int charger_count
+        string speed_type
+    }
+    FACT_EVS {
+        string region_ons
+        date date
+        int vehicle_count
+        string fuel_type
+    }
+    DIM_GEOGRAPHY {
+        string region_ons
+        string region_name
+        string hierarchy_level
+        string urban_rural_status
+    }
 ## 📊 Key insights
 
 
