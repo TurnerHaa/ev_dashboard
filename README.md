@@ -40,6 +40,8 @@ This ETL pipeline automatically ingests quarterly and monthly DfT (Department fo
 ## 💡Future expansion
 \* Add a second report page with visualizations tailored to specific UK regions for advanced intraregional comparisons
 
+\* Add mobile alerts for data updates using Twilio
+
 \* Allow toggle between total chargers and chargers per 100k on primary bar chart
 
 \* Partition chargers and vehicles tables for faster recursive CTE passovers
