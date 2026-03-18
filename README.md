@@ -29,10 +29,13 @@ This ETL pipeline automatically ingests quarterly and monthly DfT (Department fo
 \* **Scheduling:** (GitHub Actions) — For automatically checking for new data and re-running the pipeline when new values are found.
 
 ## 🏔️ Challenges
+RAGGED HIERARCHY
+
 
 
 ## ⚡ How to run it
 
+DRAW SCHEMA
 
 ## 📊 Key insights
 
