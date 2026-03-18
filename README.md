@@ -39,5 +39,7 @@ This ETL pipeline automatically ingests quarterly and monthly DfT (Department fo
 
 ## 💡Future expansion
 \* Add a second report page with visualizations tailored to specific UK regions for advanced intraregional comparisons
+
 \* Allow toggle between total chargers and chargers per 100k on primary bar chart
+
 \* Create separate page for chargers data which reports more frequently than EV licensing data
