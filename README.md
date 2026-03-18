@@ -12,6 +12,4 @@ This ETL pipeline automatically ingests quarterly and monthly DfT (Department fo
 
 ## Tech stack
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffffff)
-
-
-
+![Supabase](https://img.shields.io/badge/supabase-3670A0?style=for-the-badge&logo=supabase&logoColor=ffffff)
