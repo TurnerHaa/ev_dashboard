@@ -11,3 +11,5 @@ This ETL pipeline automatically ingests quarterly and monthly DfT (Department fo
 ## Process
 <img width="1640" height="746" alt="ETL" src="https://github.com/user-attachments/assets/31cd4315-ff1e-4153-b988-3ea84a9ee837" />
 
+## Tech stack
+![image]({[BadgeURLHere](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue})
