@@ -27,7 +27,7 @@ if not DB_URL:
     if not all([user, password, host]):
         raise ValueError(f"ERROR: Missing DB credentials! User: {user}, Host: {host}")
     
-    DB_URL = f"postgresql://{user}:{password}@{host}:{port}/{db_name}"
+    DB_URL = f"postgresql://{user}.izyfaovqipncvyklgxdl:{password}@{host}:{port}/{db_name}"
 
 if not DB_URL:
     raise ValueError("CRITICAL: No Database connection information found!")
