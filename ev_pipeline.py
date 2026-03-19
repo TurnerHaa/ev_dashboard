@@ -14,17 +14,18 @@ from datetime import date
 # ============================================================
 # CONFIGURATION
 # ============================================================
-# Check for a full URL first (easy for local override), 
-# then fallback to individual components
-DB_URL = os.getenv("DATABASE_URL")
+DB_URL = os.getenv("DB_URL")
 
 if not DB_URL:
     # Build the URL from individual components if DATABASE_URL isn't provided
-    user = os.getenv("DATABASE_USER")
-    password = os.getenv("DATABASE_PASSWORD")
-    host = os.getenv("DATABASE_HOST")
-    db_name = os.getenv("DATABASE_NAME", "postgres") # Defaults to 'postgres'
+    user = os.getenv("DB_USER")
+    password = os.getenv("DB_PASSWORD")
+    host = os.getenv("DB_HOST")
+    db_name = os.getenv("DB_NAME", "postgres")
     port = os.getenv("DATABASE_PORT", "5432")
+
+    if not all([user, password, host]):
+        raise ValueError(f"ERROR: Missing DB credentials! User: {user}, Host: {host}")
     
     DB_URL = f"postgresql://{user}:{password}@{host}:{port}/{db_name}"
 
