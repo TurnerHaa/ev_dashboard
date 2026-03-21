@@ -29,16 +29,22 @@ This ETL pipeline automatically ingests quarterly and monthly DfT (Department fo
 \* **Scheduling:** (GitHub Actions) — Automatically check for new data and re-running the pipeline when new values are found.
 
 
-## ⚡ How to run it
-**Step 1:**
+## ⚡ Getting started
+Steps to get the repo up and running:
 
-**Step 2:**
+```Bash
+# Clone the repository
+git clone https://github.com/TurnerHaa/ev_dashboard.git
 
-**Step 3:**
+cd your-name
 
-**Step 4:**
+# Install dependencies
+pip install -r requirements.txt
 
-**Step 5:**
+```
+
+
+
 
 ## 🏔️ Challenges
 #### Ragged hierarchy ####
