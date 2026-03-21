@@ -46,7 +46,7 @@ pip install -r requirements.txt
 
 ```
 
-
+**Configuration**
 
 **Running the pipeline**
 
