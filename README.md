@@ -28,6 +28,18 @@ This ETL pipeline automatically ingests quarterly and monthly DfT (Department fo
 
 \* **Scheduling:** (GitHub Actions) — Automatically check for new data and re-running the pipeline when new values are found.
 
+
+## ⚡ How to run it
+**Step 1:**
+
+**Step 2:**
+
+**Step 3:**
+
+**Step 4:**
+
+**Step 5:**
+
 ## 🏔️ Challenges
 #### Ragged hierarchy ####
 PowerBI lacks an easy way to deal with ragged hierarchies despite them being critical for users to easily switch between different tiers of UK geographies and build an analysis that matches their decision making range.
@@ -43,15 +55,6 @@ For this hierarchy to work in the data model, all fact tables needed to be atomi
 We connect these to our filtered hierarchy using a closure table, that lists every existing link between an ancestor and descendant in the entire tree.
 
 ```SQL
-{{ config(materialized='table') }}
-
-WITH raw_data AS (
-    SELECT * FROM {{ source('supabase_uploads', 'chargers') }}
-),
-closure AS (
-    SELECT * FROM {{ ref('region_closure') }}
-)
-
 SELECT
     c.region_ons,
     c.quarter,
@@ -70,7 +73,6 @@ WHERE NOT EXISTS (
 
 ```
 
-## ⚡ How to run it
     
 
 
