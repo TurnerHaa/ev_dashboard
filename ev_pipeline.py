@@ -22,12 +22,13 @@ if not DB_URL:
     password = os.getenv("DB_PASSWORD")
     host = os.getenv("DB_HOST")
     db_name = os.getenv("DB_NAME", "postgres")
-    port = os.getenv("DB_PORT", "5432")
+    port = os.getenv("DB_PORT", "6543")
 
     if not all([user, password, host]):
         raise ValueError(f"ERROR: Missing DB credentials! User: {user}, Host: {host}")
     
-    DB_URL = f"postgresql://{user}.izyfaovqipncvyklgxdl:{password}@{host}:{port}/{db_name}"
+    # Change this line in your script:
+    DB_URL = f"postgresql://{user}:{password}@{host}:{port}/{db_name}"
 
 if not DB_URL:
     raise ValueError("CRITICAL: No Database connection information found!")
