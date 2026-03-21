@@ -34,20 +34,7 @@ jobs:
       - name: Setup dbt Profile
         run: |
           mkdir -p ~/.dbt
-          cat << 'EOF' > ~/.dbt/profiles.yml
-          ev_project:
-            outputs:
-              dev:
-                type: postgres
-                host: "{{ env_var('DB_HOST') }}"
-                user: "{{ env_var('DB_USER') }}"
-                password: "{{ env_var('DB_PASSWORD') }}"
-                port: 6543
-                dbname: "{{ env_var('DB_NAME') }}"
-                schema: public
-                threads: 1
-            target: dev
-          EOF
-
+          echo "${{ secrets.DBT_PROFILES }}" > ~/.dbt/profiles.yml
+        
       - name: Run Python Pipeline
         run: python ev_pipeline.py
