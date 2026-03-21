@@ -30,13 +30,16 @@ This ETL pipeline automatically ingests quarterly and monthly DfT (Department fo
 
 
 ## ⚡ Getting started
-Steps to get the repo up and running:
+
+**Prerequisites**
+
+**Setup**
 
 ```Bash
 # Clone the repository
 git clone https://github.com/TurnerHaa/ev_dashboard.git
 
-cd your-name
+cd your-project
 
 # Install dependencies
 pip install -r requirements.txt
@@ -44,6 +47,8 @@ pip install -r requirements.txt
 ```
 
 
+
+**Running the pipeline**
 
 
 ## 🏔️ Challenges
