@@ -65,12 +65,21 @@ env:
 
 ```
 
+If running this pipeline in a GitHub repo, profiles is stored as another repo secret which is accessed by pipeline.yml.
+
+```
+- name: Setup dbt Profile
+        run: |
+          mkdir -p ~/.dbt
+          echo "${{ secrets.DBT_PROFILES }}" > ~/.dbt/profiles.yml
+```
+
+On a local machine, the equivalent file is found under Users/your_username/.dbt/profiles.yml.
+
+See profiles_example.yml for an example of what database information should be stored in your profile variable.
 
 
-dbt profile
-
-
-**Configuration**
+**Time configuration**
 
 
 By default, this CRON job runs the script via GitHub actions at midnight on Monday and Friday.
