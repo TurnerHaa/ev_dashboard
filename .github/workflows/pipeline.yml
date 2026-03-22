@@ -2,7 +2,7 @@ name: EV Data Pipeline
 
 on:
   schedule:
-    - cron: '00 00 * * 1,5'
+    - cron: '00 00 * * 2,5'
   workflow_dispatch:
 
 env:
