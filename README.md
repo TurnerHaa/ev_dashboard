@@ -132,13 +132,14 @@ WHERE NOT EXISTS (
 
 
 ## 📊 Key insights
-\* Between Q4 2023 (earliest) and Q3 2025 (latest) while the total number of rapid + ultra rapid chargers roughly doubled from 8,000 to 16,000, their total share of charging infrastructure only rose from 18% to 20%.
 
-\* TOTAL GROWTH FULL TIME
+\* Since Q4 2019, the total number of public chargers available nationwide increased four-fold, from 15,000 to 82,000.
+
+\* Between Q4 2023 (earliest) and Q3 2025 (latest) the total number of rapid + ultra rapid chargers roughly doubled from 8,000 to 16,000, however their total share of charging infrastructure only rose from 18% to 20%.
 
 \* Vehicles per charger best and worst
 
-\* London dominance
+\* London leads comfortably in terms of chargers per population, with 275 EV chargers per 100,000 people. The second highest, West Midlands, sat at less than half this number at 127 chargers per 100k.
 
 \* Best vehicles per charger ratio
 
