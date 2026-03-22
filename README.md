@@ -109,6 +109,8 @@ For this hierarchy to work in the data model, all fact tables needed to be atomi
 
 We connect these to our filtered hierarchy using a closure table, that lists every existing link between an ancestor and descendant in the entire tree.
 
+This decision came with a trade off. In prioritising the user's ability to hop between geographic scales it became easier to look at data at local, regional, country and national scales, but it became harder to implement comparisons like averages into charts because the comparison would shift drastically with geographic filters. This is something that could be addressed in future iterations.
+
 ```SQL
 SELECT
     c.region_ons,
@@ -127,6 +129,11 @@ WHERE NOT EXISTS (
 )
 
 ```
+
+#### Date ranges  ####
+Although the UK governments Department for Transport handles the data for both EV charging infrastructure and vehicle registrations and both are reported quarterly, new releases for both datasets do not arrive on the same day. 
+
+In order to keep valuable insights like vehicle to charger ration, the decision was made to set the latest dashboard date to latest date in the vehicles data (tends to release slower) to preserve the dashboards full suite of insights at any given time.
 
 ## 📊 Key insights
 
