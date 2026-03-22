@@ -35,6 +35,8 @@ This ETL pipeline automatically ingests quarterly and monthly DfT (Department fo
 
 **Setup**
 
+To begin using the project yourself, clone the repository and ensure you have all the necessary requirements.
+
 ```Bash
 # Clone the repository
 git clone https://github.com/TurnerHaa/ev_dashboard.git
@@ -46,10 +48,17 @@ pip install -r requirements.txt
 
 ```
 
+You will also need to create a Supabase project (or your preferred cloud database) where your cleaned data will be stored. See the configuration section below on how to connect that to this pipeline. 
+
+
 **Configuration**
-You can configure how frequently the pipeline will search for new data inside workflows/pipeline.yml.
+
 
 By default, this CRON job runs the script via GitHub actions at midnight on Monday and Friday.
+
+You can change how frequently the pipeline will search for new data inside workflows/pipeline.yml.
+
+Keep in mind, GitHub actions is limited to 2,000 minutes per month for free accounts across all projects for free accounts.
 
 ```YAML
 on:
@@ -57,7 +66,9 @@ on:
     - cron: '00 00 * * 1,5'
 ```
 
-**Running the pipeline**
+REPO SECRETS OR ENV file
+
+dbt profile
 
 
 ## 🏔️ Challenges
