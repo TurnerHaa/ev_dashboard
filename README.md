@@ -48,7 +48,24 @@ pip install -r requirements.txt
 
 ```
 
-You will also need to create a Supabase project (or your preferred cloud database) where your cleaned data will be stored. See the configuration section below on how to connect that to this pipeline. 
+You will also need to create a Supabase project (or your preferred cloud database) where your cleaned data will be stored. 
+
+By default, the script pulls database credentials from GitHub Secrets (Settings > Secrets and variables > actions). To run locally, you can substitute secrets with local environment variables. See examples.env for reference.
+
+
+```YAML
+env:
+  DB_HOST: ${{ secrets.DB_HOST }}
+  DB_USER: ${{ secrets.DB_USER }}
+  DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+  DB_NAME: ${{ secrets.DB_NAME }}
+  DB_PORT: "6543"
+
+```
+
+
+
+dbt profile
 
 
 **Configuration**
@@ -58,17 +75,13 @@ By default, this CRON job runs the script via GitHub actions at midnight on Mond
 
 You can change how frequently the pipeline will search for new data inside workflows/pipeline.yml.
 
-Keep in mind, GitHub actions is limited to 2,000 minutes per month for free accounts across all projects for free accounts.
+Keep in mind, GitHub actions is limited to 2,000 minutes per month across all projects for free accounts.
 
 ```YAML
 on:
   schedule:
     - cron: '00 00 * * 1,5'
 ```
-
-REPO SECRETS OR ENV file
-
-dbt profile
 
 
 ## 🏔️ Challenges
