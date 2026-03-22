@@ -47,6 +47,15 @@ pip install -r requirements.txt
 ```
 
 **Configuration**
+You can configure how frequently the pipeline will search for new data inside workflows/pipeline.yml.
+
+By default, this CRON job runs the script via GitHub actions at midnight on Monday and Friday.
+
+```YAML
+on:
+  schedule:
+    - cron: '00 00 * * 1,5'
+```
 
 **Running the pipeline**
 
