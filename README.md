@@ -132,7 +132,15 @@ WHERE NOT EXISTS (
 
 
 ## 📊 Key insights
+\* Between Q4 2023 (earliest) and Q3 2025 (latest) while the total number of rapid + ultra rapid chargers roughly doubled from 8,000 to 16,000, their total share of charging infrastructure only rose from 18% to 20%.
 
+\* TOTAL GROWTH FULL TIME
+
+\* Vehicles per charger best and worst
+
+\* London dominance
+
+\* Best vehicles per charger ratio
 
 ## 💡Future expansion
 \* Add a second report page with visualizations tailored to specific UK regions for advanced intraregional comparisons
