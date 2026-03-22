@@ -94,18 +94,6 @@ on:
     - cron: '00 00 * * 1,5'
 ```
 
-## 📊 Key insights
-
-\* Since Q4 2019, the total number of public chargers available nationwide increased four-fold, from 15,000 to 82,000.
-
-\* Between Q4 2023 (earliest) and Q3 2025 (latest) the total number of rapid + ultra rapid chargers roughly doubled from 8,000 to 16,000, however their total share of charging infrastructure only rose from 18% to 20%.
-
-\* In Windsor and Maidenhead, EV adoption has outpaced charger infrastructure. With 158,000 registered EVs and just 155 public chargers, the area has the largest imbalance in the country with 1,020 vehicles per charger.
-
-\* London leads comfortably in terms of chargers per population, with 275 EV chargers per 100,000 people. The second highest, West Midlands, sat at less than half this number at 127 chargers per 100k.
-
-\* Best vehicles per charger ratio
-
 
 ## 🏔️ Challenges
 #### Ragged hierarchy ####
@@ -139,6 +127,19 @@ WHERE NOT EXISTS (
 )
 
 ```
+
+## 📊 Key insights
+
+\* Since Q4 2019, the total number of public chargers available nationwide increased four-fold, from 15,000 to 82,000.
+
+\* In Windsor and Maidenhead, EV adoption has outpaced charger infrastructure. With 158,000 registered EVs and just 155 public chargers, the area has the largest imbalance in the country with 1,020 vehicles per charger.
+
+\* Coventry and Hackney tied for the best vehicle to charger ratio with just three registered electric vehicles per public charger.
+
+\* London leads comfortably in terms of chargers per population, with 275 EV chargers per 100,000 people. The second highest, West Midlands, sat at less than half this number at 127 chargers per 100k.
+
+\* Between Q4 2023 (earliest) and Q3 2025 (latest) the total number of rapid + ultra rapid chargers roughly doubled from 8,000 to 16,000, however their total share of charging infrastructure only rose from 18% to 20%.
+
 
 ## 💡Future expansion
 \* Add a second report page with visualizations tailored to specific UK regions for advanced intraregional comparisons
