@@ -6,6 +6,8 @@
 ![dbt](https://img.shields.io/badge/dbt-FF694B?style=for-the-badge&logo=dbt&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=power-bi&logoColor=black)
 
+An end to end ETL pipeline that checks, cleans and visualizes the latest electric chargers and electric vehicle registration data from GOV.UK.
+
 ![2026-03-18-17-32-57](https://github.com/user-attachments/assets/30dd8d64-5168-4f4d-837e-f62fd4207880)
 
 ### The Problem: 
