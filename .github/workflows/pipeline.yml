@@ -33,9 +33,7 @@ jobs:
 
       - name: List models directory
         run: |
-          echo "Current directory:"
-          pwd
-          echo "Files in models directory:"
+          echo "Checking inside ev_transform/models:"
           ls -R ev_transform/models/
 
       - name: Setup dbt Profile
