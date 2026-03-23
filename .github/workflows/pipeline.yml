@@ -31,6 +31,13 @@ jobs:
           # Specific engine needed for your pd.read_excel(engine='odf') calls
           pip install odfpy 
 
+      - name: List models directory
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Files in models directory:"
+          ls -R models/
+
       - name: Setup dbt Profile
         run: |
           mkdir -p ~/.dbt
