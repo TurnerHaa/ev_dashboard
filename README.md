@@ -17,7 +17,8 @@ An end to end ETL pipeline that checks, cleans and visualizes the latest electri
 This ETL pipeline automatically ingests quarterly and monthly DfT (Department for Transport) statistics, transforms them into a unified schema, and feeds a Power BI Dashboard. This allows anyone—from local councillors to EV advocates—to visualize charger density and vehicle adoption across all UK regions.
 
 ## Process
-<img width="1640" height="746" alt="ETL" src="https://github.com/user-attachments/assets/31cd4315-ff1e-4153-b988-3ea84a9ee837" />
+<img width="1177" height="508" alt="Screenshot 2026-03-23 200122" src="https://github.com/user-attachments/assets/e2583c6f-dad8-45f6-a3d1-116ae9a03ce9" />
+
 
 ## 🛠 Tech Stack
 \* **Data collection + cleaning:** (Python + Pandas + Beautiful Soup) — Pulling data from GOV.UK, cleaning notes and mispellings, reformatting dates. 
