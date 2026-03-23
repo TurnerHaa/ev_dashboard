@@ -494,7 +494,7 @@ def run_pipeline():
     # combine dates to single date col
     evs['date'] = evs['date'].str.replace(' ', '-')
 
-    evs['date'] = pd.PeriodIndex(evs['date'], freq='Q').to_timestamp().date
+    evs['date'] = pd.PeriodIndex(evs['date'], freq='Q').to_timestamp(how='end').date
 
     # fix capitalization
     cols = ['Fuel', 'Keepership']
