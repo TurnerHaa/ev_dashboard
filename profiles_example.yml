@@ -1,0 +1,13 @@
+# store this as DBT_PROFILES if using GitHub actions or in C:\Users\your_username\.dbt\profiles.yml if running locally
+ev_transform:
+  outputs:
+    dev:
+      dbname: DB_NAME
+      host: DB_HOST
+      pass: DB_PASSWORD
+      port: DB_PORT
+      schema: public
+      threads: 4
+      type: postgres
+      user: DB_USER
+  target: dev
