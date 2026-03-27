@@ -75,9 +75,13 @@ WHERE NOT EXISTS (
 ## 🚀 Getting started
 
 **Prerequisites**
+
 /* Python 3.9+
+
 /* Supabase account
+
 /* PowerBI
+
 /* dbt Core (for running local transformations)
 
 **Setup**
@@ -119,6 +123,9 @@ on:
 </details>
 
 ## Future roadmap
+
 [ ] Mobile Alerts: Integrate Twilio for SMS notifications when new DfT data is detected.
+
 [ ] Optimization: Partition chargers and vehicles tables for faster recursive queries.
+
 [ ] Advanced Viz: Add a "Comparison Mode" to benchmark two specific Local Authorities side-by-side.
