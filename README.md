@@ -79,15 +79,20 @@ On a local machine, the equivalent file is found under Users/your_username/.dbt/
 
 See profiles_example.yml for an example of what database information should be stored in your profile variable.
 
+**Supabase schema**
+<img width="2297" height="1036" alt="schema" src="https://github.com/user-attachments/assets/a0c2f97a-8163-4aa3-9e1a-739f467dcadc" />
+
+
 
 **Time configuration**
-
 
 By default, this CRON job runs the script via GitHub actions at midnight on Monday and Friday.
 
 You can change how frequently the pipeline will search for new data inside workflows/pipeline.yml.
 
 Keep in mind, GitHub actions is limited to 2,000 minutes per month across all projects for free accounts.
+
+
 
 ```YAML
 on:
