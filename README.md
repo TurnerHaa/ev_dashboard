@@ -33,7 +33,7 @@ This pipeline automates the ingestion of quarterly DfT statistics, feeding into 
 | **Visualization** | `PowerBI` | Interactive spatial and trend analysis. |
 
 ## 🔧 Data Engineering Challenges
-**Solving the ragged hierarchy**
+**1. Solving the ragged hierarchy**
 The UK's regional geography can be messy. To prevent "double counting" in Power BI:
 
 **The problem:** If the dashboard sums "London" and "Westminster" a subset of London, the totals overinflate.
@@ -57,17 +57,31 @@ WHERE NOT EXISTS (
 )
 
 ```
+<img width="2297" height="1036" alt="schema" src="https://github.com/user-attachments/assets/a0c2f97a-8163-4aa3-9e1a-739f467dcadc" />
 
+**2. Synchronizing data release dates**
+**The problem:** Charger data and EV registrations release on different schedule to each other. 
+**The fix:** Pipeline logic uses vehichle registrations as the 'global date', preventing nulls from lagging data releases.
 
+## 📊 Key Insights (As of Q3 2025)
+**Growth:** Total public chargers increased 4x since 2019 (15k → 82k).
 
-## ⚡ Getting started
+**The "Gap":** Windsor & Maidenhead show the largest imbalance with 1,020 vehicles per charger.
+
+**Efficiency:** Coventry and Hackney lead the country with a 3:1 vehicle-to-charger ratio.
+
+**Infrastructure Mix:** Rapid/Ultra-rapid chargers doubled in volume (8k → 16k) but their total market share only grew by 2%, indicating slower-speed chargers still dominate the rollout.
+
+## 🚀 Getting started
 
 **Prerequisites**
+/* Python 3.9+
+/* Supabase account
+/* PowerBI
+/* dbt Core (for running local transformations)
 
 **Setup**
-
-To begin using the project yourself, clone the repository and ensure you have all the necessary requirements.
-
+**1. Clone and install**
 ```Bash
 # Clone the repository
 git clone https://github.com/TurnerHaa/ev_dashboard.git
@@ -76,13 +90,10 @@ cd your-project
 
 # Install dependencies
 pip install -r requirements.txt
-
 ```
 
-You will also need to create a Supabase project (or your preferred cloud database) where your cleaned data will be stored. 
-
-By default, the script pulls database credentials from GitHub Secrets (Settings > Secrets and variables > actions). To run locally, you can substitute secrets with local environment variables. See examples.env for reference.
-
+**2. Environment variables**
+Create a `.env` file based on `examples.env` or setup your GitHub actions with the following secrets:
 
 ```YAML
 env:
@@ -93,106 +104,20 @@ env:
   DB_PORT: "6543"
 
 ```
-
-If running this pipeline in a GitHub repo, profiles is stored as another repo secret which is accessed by pipeline.yml.
-
-```
-- name: Setup dbt Profile
-        run: |
-          mkdir -p ~/.dbt
-          echo "${{ secrets.DBT_PROFILES }}" > ~/.dbt/profiles.yml
-```
-
-On a local machine, the equivalent file is found under Users/your_username/.dbt/profiles.yml.
-
-See profiles_example.yml for an example of what database information should be stored in your profile variable.
-
-**Supabase schema**
-<img width="2297" height="1036" alt="schema" src="https://github.com/user-attachments/assets/a0c2f97a-8163-4aa3-9e1a-739f467dcadc" />
+**3. Database schema**
+The dbt models are located in `/models`. Run `dbt run` to create hierarchy and closure tables.
 
 
+<details>
+<summary><b>View GitHub Actions time settings</b></summary>
 
-**Time configuration**
-
-By default, this CRON job runs the script via GitHub actions at midnight on Monday and Friday.
-
-You can change how frequently the pipeline will search for new data inside workflows/pipeline.yml.
-
-Keep in mind, GitHub actions is limited to 2,000 minutes per month across all projects for free accounts.
-
-
-
-```YAML
+```yaml
 on:
   schedule:
-    - cron: '00 00 * * 1,5'
-```
+    - cron: '00 00 * * 1,5' # set to run the pipeline at midnight every Monday and Friday.
+</details>
 
-
-## 🏔️ Challenges
-#### Ragged hierarchy ####
-PowerBI lacks an easy way to deal with ragged hierarchies despite them being critical for users to easily switch between different tiers of UK geographies and build an analysis that matches their decision making range.
-
-To make this work, we must ensure the value of a wider area (like the entire UK) is always just the sum of the areas at the lowest levels. If our data contains the actual UK values, we overinflate our total. 
-
-The solution was to create a filtered hierarchy table. Here, each row represents a distint UK region and columns *level1* to *level6* indicate the 'family tree' leading to that respective region.
-
-<img width="2118" height="766" alt="image" src="https://github.com/user-attachments/assets/a2eff881-94e6-4573-b1b9-1920f542097f" />
-
-For this hierarchy to work in the data model, all fact tables needed to be atomized so they only contain the smallest regions in the hierarchy – i.e. the smallest regional slices in the UK. This was done using recursive CTEs.
-
-We connect these to our filtered hierarchy using a closure table, that lists every existing link between an ancestor and descendant in the entire tree.
-
-This decision came with a trade off. In prioritising the user's ability to hop between geographic scales it became easier to look at data at local, regional, country and national scales, but it became harder to implement comparisons like averages into charts because the comparison would shift drastically with geographic filters. This is something that could be addressed in future iterations.
-
-```SQL
-SELECT
-    c.region_ons,
-    c.quarter,
-    c.all_chargers,
-    c.fast_chargers
-FROM raw_data c
-WHERE NOT EXISTS (
-    SELECT 1
-    FROM closure rc
-    JOIN raw_data c_child
-        ON c_child.region_ons = rc.descendant_ons
-        AND c_child.quarter = c.quarter
-    WHERE rc.ancestor_ons = c.region_ons
-    AND rc.descendant_ons <> c.region_ons
-)
-
-```
-
-#### Date ranges  ####
-Although the UK governments Department for Transport handles the data for both EV charging infrastructure and vehicle registrations and both are reported quarterly, new releases for both datasets do not arrive on the same day. 
-
-In order to keep valuable insights like vehicle to charger ration, the decision was made to set the latest dashboard date to latest date in the vehicles data (tends to release slower) to preserve the dashboards full suite of insights at any given time.
-
-## 📊 Key insights
-
-\* Since Q4 2019, the total number of public chargers available nationwide increased four-fold, from 15,000 to 82,000.
-
-\* In Windsor and Maidenhead, EV adoption has outpaced charger infrastructure. With 158,000 registered EVs and just 155 public chargers, the area has the largest imbalance in the country with 1,020 vehicles per charger.
-
-\* Coventry and Hackney tied for the best vehicle to charger ratio with just three registered electric vehicles per public charger.
-
-\* London leads comfortably in terms of chargers per population, with 275 EV chargers per 100,000 people. The second highest, West Midlands, sat at less than half this number at 127 chargers per 100k.
-
-\* Between Q4 2023 (earliest) and Q3 2025 (latest) the total number of rapid + ultra rapid chargers roughly doubled from 8,000 to 16,000, however their total share of charging infrastructure only rose from 18% to 20%.
-
-
-## 💡Future expansion
-\* Add a second report page with visualizations tailored to specific UK regions for advanced intraregional comparisons
-
-\* Add mobile alerts for data updates using Twilio
-
-\* Allow toggle between total chargers and chargers per 100k on primary bar chart
-
-\* Partition chargers and vehicles tables for faster recursive CTE passovers
-
-\* Build views for more focused data ingestion from Supabase
-
-\* Turn repeated Python code into functions to improve codebase structure
-
-\* Create separate page for chargers data which reports more frequently than EV licensing data
+## Future roadmap
+[ ] Mobile Alerts: Integrate Twilio for SMS notifications when new DfT data is detected.
+[ ] Optimization: Partition chargers and vehicles tables for faster recursive queries.
+[ ] Advanced Viz: Add a "Comparison Mode" to benchmark two specific Local Authorities side-by-side.
