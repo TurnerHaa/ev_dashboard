@@ -6,21 +6,33 @@
 ![dbt](https://img.shields.io/badge/dbt-FF694B?style=for-the-badge&logo=dbt&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=power-bi&logoColor=black)
 
-An end to end ETL pipeline that checks, cleans and visualizes the latest electric chargers and electric vehicle registration data from GOV.UK.
+An end-to-end ETL pipeline that extracts, cleans, and visualizes the latest electric vehicle (EV) registrations and charging infrastructure data from the UK Department for Transport (DfT).
+
+VIEW THE LIVE DASHBOARD
 
 ![2026-03-18-17-32-57](https://github.com/user-attachments/assets/30dd8d64-5168-4f4d-837e-f62fd4207880)
 
-### The Problem: 
-1 in 5 vehicles sold in the UK are now electric, but the infrastructure rollout risks stalling. Vital data for policymakers is currently locked in dense, quarterly GOV.UK reports, making it difficult to track regional disparities or real-time progress.
+### 📖 The Problem: 
+While 1 in 5 vehicles sold in the UK are now electric, infrastructure rollout risks stalling. Vital data for policymakers is often locked in **dense, quarterly Excel/CSV reports**, making it difficult to track regional disparities or real-time progress.
 
-### The Solution: 
-This ETL pipeline automatically ingests quarterly and monthly DfT (Department for Transport) statistics, transforms them into a unified schema, and feeds a Power BI Dashboard. This allows anyone—from local councillors to EV advocates—to visualize charger density and vehicle adoption across all UK regions.
+### 💡 The Solution: 
+This pipeline automates the ingestion of quarterly DfT statistics, feeding into a **Power BI Dashboard**. This enables local councillors and EV advocates to visualize charger density and vehicle adoption across all UK regions instantly.
 
 ## Process
 <img width="1177" height="508" alt="Screenshot 2026-03-23 200122" src="https://github.com/user-attachments/assets/e2583c6f-dad8-45f6-a3d1-116ae9a03ce9" />
 
 
 ## 🛠 Tech Stack
+| Layer | Tools | Purpose |
+| :--- | :--- | :--- |
+| **Extraction** | Text | More text |
+| **Transformation** | Text | More text |
+| **Loading** | Text | More text |
+| **Database** | Text | More text |
+| **Orchestration** | Text | More text |
+| **Visualization** | `PowerBI` | More text |
+
+
 \* **Data collection + cleaning:** (Python + Pandas + Beautiful Soup) — Pulling data from GOV.UK, cleaning notes and mispellings, reformatting dates. 
 
 \* **Load:** (SQLAlchemy + dbt) — Connecting to Supabase and creating atomized data tables and region_closure for hierarchical data.
