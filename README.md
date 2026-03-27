@@ -115,6 +115,7 @@ The dbt models are located in `/models`. Run `dbt run` to create hierarchy and c
 on:
   schedule:
     - cron: '00 00 * * 1,5' # set to run the pipeline at midnight every Monday and Friday.
+```
 </details>
 
 ## Future roadmap
