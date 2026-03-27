@@ -76,13 +76,13 @@ WHERE NOT EXISTS (
 
 **Prerequisites**
 
-/* Python 3.9+
++ Python 3.9+
 
-/* Supabase account
++ Supabase account
 
-/* PowerBI
++ PowerBI
 
-/* dbt Core (for running local transformations)
++ dbt Core (for running local transformations)
 
 **Setup**
 **1. Clone and install**
