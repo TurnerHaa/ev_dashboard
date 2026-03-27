@@ -25,23 +25,39 @@ This pipeline automates the ingestion of quarterly DfT statistics, feeding into 
 ## 🛠 Tech Stack
 | Layer | Tools | Purpose |
 | :--- | :--- | :--- |
-| **Extraction** | Text | More text |
-| **Transformation** | Text | More text |
-| **Loading** | Text | More text |
-| **Database** | Text | More text |
-| **Orchestration** | Text | More text |
-| **Visualization** | `PowerBI` | More text |
+| **Extraction** | `Python`, `Beautiful Soup` | Scraping GOV.UK for the latest release links. |
+| **Transformation** | `Pandas`,`dbt` | Data cleaning, date formatting, and hierarchical modeling. |
+| **Loading** | `SQLAlchemy` | Direct ingestion into the cloud warehouse. |
+| **Database** | `Supabase (PostgreSQL)` | Scalable storage with a managed relational schema. |
+| **Orchestration** | `GitHub Actions` | CRON-scheduled runs (Mon/Fri) to check for data updates. |
+| **Visualization** | `PowerBI` | Interactive spatial and trend analysis. |
 
+## 🔧 Data Engineering Challenges
+**Solving the ragged hierarchy**
+The UK's regional geography can be messy. To prevent "double counting" in Power BI:
 
-\* **Data collection + cleaning:** (Python + Pandas + Beautiful Soup) — Pulling data from GOV.UK, cleaning notes and mispellings, reformatting dates. 
+**The problem:** If the dashboard sums "London" and "Westminster" a subset of London, the totals overinflate.
 
-\* **Load:** (SQLAlchemy + dbt) — Connecting to Supabase and creating atomized data tables and region_closure for hierarchical data.
+**The fix:** I introduced a closure table and recursive CTE. All fact tables are atomized to the smallest possible regional slice.
 
-\* **Database:** (Supabase/PostgreSQL) — Simple to manage and generous free tier for a small project.
+**The result:** Users can drill down from "National" to "Local" without double-counting data.
 
-\* **Visualization:** (PowerBI) — Used to visualize data and explore core insights.
+```SQL
+SELECT
+    c.region_ons, c.quarter, c.all_chargers, c.fast_chargers
+FROM raw_data c
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM closure rc
+    JOIN raw_data c_child
+        ON c_child.region_ons = rc.descendant_ons
+        AND c_child.quarter = c.quarter
+    WHERE rc.ancestor_ons = c.region_ons
+    AND rc.descendant_ons <> c.region_ons
+)
 
-\* **Scheduling:** (GitHub Actions) — Automatically check for new data and re-running the pipeline when new values are found.
+```
+
 
 
 ## ⚡ Getting started
