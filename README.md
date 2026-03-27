@@ -10,7 +10,7 @@ An end-to-end ETL pipeline that extracts, cleans, and visualizes the latest elec
 
 VIEW THE LIVE DASHBOARD
 
-![2026-03-18-17-32-57](https://github.com/user-attachments/assets/30dd8d64-5168-4f4d-837e-f62fd4207880)
+![2026-03-27 20-45-24](https://github.com/user-attachments/assets/020ef005-8393-42f7-b563-bbc44413d4ae)
 
 ### 📖 The Problem: 
 While 1 in 5 vehicles sold in the UK are now electric, infrastructure rollout risks stalling. Vital data for policymakers is often locked in **dense, quarterly Excel/CSV reports**, making it difficult to track regional disparities or real-time progress.
