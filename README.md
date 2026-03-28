@@ -8,7 +8,7 @@
 
 An end-to-end ETL pipeline that extracts, cleans, and visualizes the latest electric vehicle (EV) registrations and charging infrastructure data from the UK Department for Transport (DfT).
 
-VIEW THE LIVE DASHBOARD
+[💻View the live dashboard](https://app.powerbi.com/view?r=eyJrIjoiZTA2MDBhZTUtOGE5ZC00N2IyLTgyYjktMWJmZjYwYWE4OWI2IiwidCI6IjQ1NjM5MmIxLTY0MWMtNDE0Yi05MTMzLTNjNDRmYThiMmIwOCJ9)
 
 ![2026-03-27 20-45-24](https://github.com/user-attachments/assets/020ef005-8393-42f7-b563-bbc44413d4ae)
 
